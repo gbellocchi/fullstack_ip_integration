@@ -1,0 +1,7 @@
+axi/axi:
+  commit: v0.24.1
+  domain: [cluster, soc]
+
+register_interface/axi_to_reg:
+  commit: be8c691f91873655ac2c2d1b6c4356a380c1f250
+  domain: [cluster, soc]

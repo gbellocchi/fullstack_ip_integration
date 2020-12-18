@@ -1,0 +1,30 @@
+register_interface:
+  vlog_opts:
+    - -L register_interface_lib
+  incdirs:
+    - ../register_interface/include
+    - ../register_interface/vendor/lowrisc_opentitan/include
+    - ../register_interface/src
+  files: [
+    - ../register_interface/include/assign.svh
+    - ../register_interface/include/typedef.svh
+    - ../register_interface/vendor/lowrisc_opentitan/include/prim_assert_dummy_macros.svh
+    - ../register_interface/vendor/lowrisc_opentitan/include/prim_assert_standard_macros.svh
+    - ../register_interface/vendor/lowrisc_opentitan/include/prim_assert_yosys_macros.svh
+    - ../register_interface/vendor/lowrisc_opentitan/include/prim_assert.sv
+    - ../register_interface/src/axi_to_reg.sv
+  ]
+
+fullstack_ip_integration:
+  vlog_opts:
+    - -L fullstack_ip_integration_lib
+  incdirs:
+    - ./include
+    - ./rtl
+  files: [
+    - ./include/wide_alu_pkg.sv
+    - ./include/wide_alu_reg_pkg.sv
+    - ./rtl/wide_alu.sv
+    - ./rtl/wide_alu_reg_top.sv
+    - ./rtl/wide_alu_top.sv
+  ]
